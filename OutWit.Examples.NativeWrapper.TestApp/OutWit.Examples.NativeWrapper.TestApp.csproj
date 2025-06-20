@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+	  <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OutWit.Examples.NativeWrapper\OutWit.Examples.NativeWrapper.vcxproj" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="echo D|xcopy &quot;$(SolutionDir)@Native\$(Configuration)\$(Platform)\bin\*.*&quot; &quot;$(TargetDir)&quot; /Y/S" />
+  </Target>
+
+</Project>

@@ -6,7 +6,8 @@ namespace OutWit.Examples.NativeWrapper.TestApp
 {
     class Program
     {
-        private const int ITERATIONS = 10_000_000;
+        private const int ITERATIONS_DOUBLE = 10_000_000;
+        private const int ITERATIONS_INT = 100_000;
         private const int ATTEMPTS = 10;
 
         public static void Main()
@@ -19,7 +20,7 @@ namespace OutWit.Examples.NativeWrapper.TestApp
             {
                 var start = DateTime.Now;
 
-                BenchmarkWrapper.RunDouble(ITERATIONS);
+                BenchmarkWrapper.RunDouble(ITERATIONS_DOUBLE);
 
                 var end = DateTime.Now;
 
@@ -41,7 +42,7 @@ namespace OutWit.Examples.NativeWrapper.TestApp
             {
                 var start = DateTime.Now;
 
-                BenchmarkWrapper.RunInt(ITERATIONS);
+                BenchmarkWrapper.RunInt(ITERATIONS_INT);
 
                 var end = DateTime.Now;
 

@@ -9,7 +9,8 @@
 using namespace OutWit::Examples::NativeMixed;
 using namespace std::chrono;
 
-constexpr long ITERATIONS = 10000000;
+constexpr long ITERATIONS_DOUBLE = 10000000;
+constexpr long ITERATIONS_INT = 100000;
 constexpr int ATTEMPTS = 10;
 
 int main()
@@ -25,7 +26,7 @@ int main()
     {
         auto start = high_resolution_clock::now();
 
-        BenchmarkNative::RunDouble(ITERATIONS);
+        BenchmarkNative::RunDouble(ITERATIONS_DOUBLE);
 
         auto end = high_resolution_clock::now();
 
@@ -45,7 +46,7 @@ int main()
     {
         auto start = high_resolution_clock::now();
 
-        BenchmarkNative::RunInt(ITERATIONS);
+        BenchmarkNative::RunInt(ITERATIONS_INT);
 
         auto end = high_resolution_clock::now();
 

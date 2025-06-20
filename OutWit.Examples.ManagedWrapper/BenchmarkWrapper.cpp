@@ -4,7 +4,7 @@
 using namespace OutWit::Examples::ManagedWrapper;
 using namespace OutWit::Examples::ManagedComponent;
 
-double BenchmarkWrapper::RunInt(long iterations)
+long BenchmarkWrapper::RunInt(long iterations)
 {
 	return Benchmark::RunInt(iterations);
 }
